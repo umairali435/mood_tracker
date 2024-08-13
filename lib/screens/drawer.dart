@@ -17,12 +17,12 @@ class CustomDrawer extends StatelessWidget {
     }
 
     void launchWebsite() {
-      const url = 'https://taskbookapp.blogspot.com/2024/08/task-book-privacy-policy.html';
+      const url = 'https://moodtrackers.blogspot.com/2024/08/mood-tracker-privacy-policy.html';
       launchURL(url);
     }
 
     void launchAppStore() {
-      Share.share("""You can find Task BookKit https://apps.apple.com/store/apps/details?id=com.adeel.todolist""");
+      Share.share("""You can find Mood Trackers https://apps.apple.com/store/apps/details?id=com.habib.moodTracker""");
     }
 
     return Container(
@@ -34,13 +34,13 @@ class CustomDrawer extends StatelessWidget {
             ClipRRect(
               borderRadius: BorderRadius.circular(10.0),
               child: Image.asset(
-                "assets/app_splash_logo.png",
+                "assets/mood_tracker_icon.png",
                 width: 50.0,
                 height: 50.0,
               ),
             ),
             const Text(
-              "Moods Tracker",
+              "Mood Trackers",
               style: TextStyle(
                 fontSize: 24.0,
                 color: AppColors.bgOrange,

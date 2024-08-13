@@ -52,7 +52,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final moodState = ref.watch(moodProvider);
-    return moodState.moods.where((element) => element.date == Helpers.dateFormatter(DateTime.now())).isNotEmpty
+    return moodState.moods.where((element) => element.date == Helpers.dateFormatter(DateTime.now())).isEmpty
         ? Scaffold(
             key: key,
             drawer: const CustomDrawer(),
@@ -60,7 +60,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               duration: const Duration(milliseconds: 500),
               height: AppSizing.height(context),
               width: AppSizing.width(context),
-              decoration: const BoxDecoration(color: AppColors.bgWhite),
+              decoration: const BoxDecoration(color: Colors.white),
               child: SafeArea(
                 child: ListView(
                   children: [

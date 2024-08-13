@@ -65,6 +65,7 @@ class _HistoryMoodState extends ConsumerState<HistoryMood> {
               ),
               Expanded(
                 child: ListView.builder(
+                  padding: const EdgeInsets.only(top: 20.0),
                   itemCount: moodState.moods.length,
                   itemBuilder: (context, index) {
                     MoodModel moods = moodState.moods[index];
@@ -72,7 +73,7 @@ class _HistoryMoodState extends ConsumerState<HistoryMood> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                         decoration: BoxDecoration(
-                          color: AppColors.bgGreen,
+                          color: AppColors.bgOrange,
                           borderRadius: BorderRadius.circular(5.0),
                         ),
                         child: ListTile(
@@ -82,10 +83,16 @@ class _HistoryMoodState extends ConsumerState<HistoryMood> {
                                 : moods.moodValue == "1"
                                     ? LucideIcons.smile
                                     : LucideIcons.laugh,
-                            color: AppColors.bgBlack,
+                            color: Colors.white,
                           ),
-                          title: Text(moods.note),
-                          subtitle: Text(moods.date),
+                          title: Text(
+                            moods.note,
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                          subtitle: Text(
+                            moods.date,
+                            style: const TextStyle(color: Colors.white),
+                          ),
                         ),
                       ),
                     );
